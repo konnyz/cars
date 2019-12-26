@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Sprzedawcy</title>
+</head>
+<body style="background-color: #ffff99;">
+<h1 style="color:red ; position: relative; left:40%; width:50%; font-family: 'Bradley Hand ITC'; font-size: xx-large;">Wszyscy sprzedawcy</h1>
+<table  BORDER style="color:red ; position: absolute; left:20%; font-family: 'Bradley Hand ITC'; font-size: x-large;">
+    <tr>
+        <th>Imie sprzedawcy</th>
+        <th>Nazwisko sprzedawcy</th>
+        <th>Miasto</th>
+        <th>Ulica</th>
+        <th>Numer domu</th>
+    </tr>
+    <tr th:each=" dealer : ${dealers}">
+        <td th:text="${dealer.firstName}"></td>
+        <td th:text="${dealer.surname}"></td>
+        <td th:text="${dealer.city}"></td>
+        <td th:text="${dealer.street}"></td>
+        <td th:text="${dealer.houseNumber}"></td>
+
+    </tr>
+
+</table>
+
+</body>
+</html>

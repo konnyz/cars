@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>historia pojazdu</title>
+</head>
+<body style="background-color: #ffff99;">
+<h1 style="color:red ; position: relative; left:40%; width:50%; font-family: 'Bradley Hand ITC'; font-size: xx-large;">Historia pojazdu</h1>
+<table BORDER style="color:red ; position: absolute; left:20%; font-family: 'Bradley Hand ITC'; font-size: x-large;">
+    <tr>
+        <th>Marka</th>
+        <th>Model</th>
+        <th>Rok produkcji</th>
+        <th>Przebieg</th>
+        <th>Imię sprzedawcy</th>
+        <th>Nazwisko sprzedawcy</th>
+    </tr>
+    <tr th:each="carHistory : ${carsHistory}">
+        <td th:text="${carHistory.brand.name}"></td>
+        <td th:text="${carHistory.car.model}"></td>
+        <td th:text="${carHistory.YProduction}"></td>
+        <td th:text="${carHistory.mileage}"></td>
+        <td th:text="${carHistory.dealer.firstName}"></td>
+        <td th:text="${carHistory.dealer.surname}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
