@@ -11,6 +11,7 @@ public class brandController {
     private brandRespository brandRespository;
 
     public brandController(brandRespository brandRespository){ this.brandRespository = brandRespository;}
+
     @RequestMapping("/brands")
     public String getBrands(Model model){
         model.addAttribute("brands", brandRespository.findAll());

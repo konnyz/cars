@@ -9,8 +9,8 @@ public class dealer {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String FirstName;
-    private String Surname;
+    private String firstName;
+    private String surname;
     private String city;
     private String street;
     private String HouseNumber;
@@ -18,13 +18,13 @@ public class dealer {
     public dealer() {
     }
 
-    public dealer(String Surname, String Firstname) {this.Surname = Surname; this.FirstName = Firstname; };
+    public dealer(String surname, String firstName) {this.surname = surname; this.firstName = firstName; };
 
 
 
     public dealer(String firstName, String surname, String city, String street, String houseNumber) {
-        this.FirstName = firstName;
-        this.Surname = surname;
+        this.firstName = firstName;
+        this.surname = surname;
         this.city = city;
         this.street = street;
         this.HouseNumber = houseNumber;
@@ -37,11 +37,11 @@ public class dealer {
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public void setSurname(String surname) {
-        Surname = surname;
+        this.surname = surname;
     }
 
     public void setCity(String city) {
@@ -61,11 +61,11 @@ public class dealer {
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public String getSurname() {
-        return Surname;
+        return surname;
     }
 
     public String getCity() {
@@ -84,8 +84,8 @@ public class dealer {
     public String toString() {
         return "dealer{" +
                 "id=" + id +
-                ", FirstName='" + FirstName + '\'' +
-                ", Surname='" + Surname + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", surname='" + surname + '\'' +
                 ", city='" + city + '\'' +
                 ", street='" + street + '\'' +
                 ", HouseNumber='" + HouseNumber + '\'' +
